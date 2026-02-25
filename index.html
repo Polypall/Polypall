@@ -4,35 +4,24 @@
   <meta charset="UTF-8" />
   <title>Polypall</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <style>
-    * {
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
+    * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
     body {
       margin: 0;
       min-height: 100vh;
-      background-image: url("https://i.postimg.cc/J4kbZbfm/bg.png");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background: url("https://i.postimg.cc/J4kbZbfm/bg.png") center/cover fixed;
       display: flex;
       justify-content: center;
       color: white;
     }
-
     .overlay {
       width: 100%;
-      min-height: 100vh;
       background: rgba(0,0,0,0.35);
       padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-
     .logo {
       width: 140px;
       height: 140px;
@@ -41,70 +30,30 @@
       border: 3px solid white;
       box-shadow: 0 0 20px black;
     }
-
     h1 {
       margin-top: 15px;
       font-size: 3rem;
-      text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000;
+      text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
     }
-
-    .tagline {
-      max-width: 700px;
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      text-shadow:
-        -1.5px -1.5px 0 #000,
-         1.5px -1.5px 0 #000,
-        -1.5px  1.5px 0 #000,
-         1.5px  1.5px 0 #000;
-    }
-
-    .apps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      width: 100%;
-      max-width: 1000px;
-    }
-
     .card {
       background: rgba(0,0,0,0.55);
       border-radius: 18px;
       padding: 15px;
       text-align: center;
       box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-      transition: transform 0.25s, box-shadow 0.25s;
+      max-width: 400px;
     }
-
-    .card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.9);
-    }
-
     .card img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      background: #111;
       border-radius: 12px;
       margin-bottom: 12px;
       border: 2px solid white;
+      display: block;
     }
-
-    .card h2 {
-      margin: 8px 0;
-      font-size: 1.4rem;
-      text-shadow:
-        -1.5px -1.5px 0 #000,
-         1.5px -1.5px 0 #000,
-        -1.5px  1.5px 0 #000,
-         1.5px  1.5px 0 #000;
-    }
-
     .card a {
       display: inline-block;
       margin-top: 8px;
@@ -114,55 +63,21 @@
       color: black;
       font-weight: bold;
       text-decoration: none;
-      transition: 0.2s;
     }
-
-    .card a:hover {
-      background: #ddd;
-    }
-
-    footer {
-      margin-top: 50px;
-      opacity: 0.7;
-      font-size: 0.9rem;
-      text-shadow: 1px 1px 2px black;
-    }
+    .card a:hover { background: #ddd; }
+    footer { margin-top: 50px; opacity: 0.7; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <div class="overlay">
-
-    <!-- LOGO -->
     <img class="logo" src="https://i.postimg.cc/W3V2QG5t/In-Shot-20251108-192211830.jpg" alt="Polypall Logo"/>
-
     <h1>polypall</h1>
-
-    <h2>Mission: PolyPall is a technology company focused on connecting the world and improving the human condition by bringing like-minded people together, one click at a time.<br>
-<i>product Ecosystem</i> <br>
-Tech Connect/technique: A networking platform where technology startup founders and tech-focused individuals can connect, collaborate, and share ideas.
-    </h2>
-
-    <p class="tagline">
-      Apps and websites built to connect people.
-    </p>
-
-    <!-- APP CARDS -->
-    <section class="apps">
-
-      <div class="card">
-
-        
-        <img src="https://i.postimg.cc/SKWccpjp/IMG-20260116-144035097-HDR.jpg" alt="App 1"/>
-        <h2> <em>Tech-Connect: The Site Sor Inventors & Investors.</em> </h2>
-        <a href="https://technique-g7pp.onrender.com" target="_blank">Visit</a>
-      </div>
-
-    </section>
-
-    <footer>
-      © 2026 Polypall. All rights reserved.
-    </footer>
-
+    <div class="card">
+      <img src="https://i.postimg.cc/SKWccpjp/IMG-20260116-144035097-HDR.jpg" alt="Tech-Connect"/>
+      <h2><em>Tech-Connect: The Site For Inventors & Investors.</em></h2>
+      <a href="https://technique-g7pp.onrender.com" target="_blank">Visit</a>
+    </div>
+    <footer>© 2026 Polypall. All rights reserved.</footer>
   </div>
 </body>
 </html>
